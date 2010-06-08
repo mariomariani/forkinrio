@@ -1,0 +1,562 @@
+  [4;36;1mSQL (0.000224)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000119)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.006904)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001670)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000088)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCarros (20100504230254)
+  [4;36;1mSQL (0.000068)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.010396)[0m   [0mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.008348)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100504230254')[0m
+  [4;35;1mSQL (0.000222)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000070)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000116)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000126)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000493)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.005940)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000234)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002822)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001582)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001265)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000323)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000138)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.005063)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000136)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002372)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001912)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000073)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.002066)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000425)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000115)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000136)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.003533)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000136)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.006989)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.004204)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000283)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.003377)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000419)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000124)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000112)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000142)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004850)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000135)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001505)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001669)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000072)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001364)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000414)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.004884)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000138)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.003975)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000255)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.013371)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001998)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000213)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000094)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001412)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.004421)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002424)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000132)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.012455)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001937)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000281)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.006610)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000439)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000047)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.003615)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000134)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.013337)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001648)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000172)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000073)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001298)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000433)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000107)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004707)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000232)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002191)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001571)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000071)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001923)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000451)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000047)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000138)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002256)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000138)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.007688)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.003715)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000339)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000104)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.002727)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000454)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000117)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000136)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.005896)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.008053)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002386)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001192)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000317)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000139)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002977)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000232)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.013245)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.008035)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000094)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001962)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000416)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000110)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000140)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.005276)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000135)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002234)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.008878)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000235)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001279)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000421)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.004341)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.008463)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000141)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001442)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001670)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000281)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001294)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000431)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000112)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000317)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000139)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.003773)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000132)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.008105)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002280)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.007834)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000413)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000112)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002677)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000133)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.008551)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001594)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000289)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001251)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000414)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000324)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004682)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000239)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001702)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001475)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000070)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001265)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000426)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000116)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000279)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000141)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.003825)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000237)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.008282)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.005794)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000270)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.005679)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m
+  [4;36;1mSQL (0.000421)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.027723)[0m   [0mPRAGMA index_list("carros")[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000141)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004241)[0m   [0;1mCREATE TABLE "carros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255) DEFAULT NULL NULL, "descricao" text DEFAULT NULL NULL, "preco" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000133)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.007946)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.009363)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000230)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001930)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100504230254')[0m

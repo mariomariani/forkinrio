@@ -1,0 +1,16 @@
+<h1>Exibindo Restaurante</h1>
+<p>
+  <b>Nome: </b>
+  <%=h @restaurante.nome %>
+</p>
+<p>
+  <b>Endereço: </b>
+  <%=h @restaurante.endereco %>
+</p>
+<p>
+  <b>Especialidade: </b>
+  <%=h @restaurante.especialidade %>
+</p>
+<%= link_to ’Edit’, { :action => ’edit’, :id => @restaurante } %>
+<%= link_to ’Back’, { :action => ’index’ } %>
+

@@ -1,0 +1,533 @@
+  [4;36;1mSQL (0.000270)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000140)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.008534)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002139)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000089)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000066)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20100427224316)
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001880)[0m   [0;1mCREATE TABLE "restaurantes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(80) DEFAULT NULL NULL, "endereco" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002017)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100427224316')[0m
+Migrating to AddEspecialidadeToRestaurante (20100427225121)
+  [4;36;1mSQL (0.000176)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000457)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20100427224316)
+  [4;36;1mSQL (0.000110)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddEspecialidadeToRestaurante (20100427225121)
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.003621)[0m   [0mALTER TABLE "restaurantes" ADD "especialidade" varchar(40)[0m
+  [4;36;1mSQL (0.007545)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.005421)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100427225121')[0m
+  [4;36;1mSQL (0.000267)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000204)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mPRAGMA index_list("restaurantes")[0m
+  [4;36;1mRestaurante Create (0.000577)[0m   [0;1mINSERT INTO "restaurantes" ("endereco", "created_at", "nome", "updated_at", "especialidade") VALUES('', '2010-04-27 23:13:01', 'Mr Pizza', '2010-04-27 23:13:01', 'Pizza')[0m
+  [4;35;1mRestaurante Update (0.000244)[0m   [0mUPDATE "restaurantes" SET "updated_at" = '2010-04-27 23:13:49', "especialidade" = 'Massas' WHERE "id" = 1[0m
+  [4;36;1mRestaurante Load (0.000340)[0m   [0;1mSELECT * FROM "restaurantes" WHERE ("restaurantes"."id" = 1) [0m
+  [4;35;1mRestaurante Destroy (0.000336)[0m   [0m DELETE FROM "restaurantes"
+ WHERE "id" = 1
+[0m
+  [4;36;1mRestaurante Load (0.000173)[0m   [0;1mSELECT * FROM "restaurantes" [0m
+  [4;35;1mRestaurante Load (0.000172)[0m   [0mSELECT * FROM "restaurantes" [0m
+  [4;36;1mRestaurante Load (0.000171)[0m   [0;1mSELECT * FROM "restaurantes" [0m
+  [4;35;1mRestaurante Load (0.000167)[0m   [0mSELECT * FROM "restaurantes" [0m
+  [4;36;1mRestaurante Update (0.000231)[0m   [0;1mUPDATE "restaurantes" SET "updated_at" = '2010-04-27 23:16:52' WHERE "id" = 2[0m
+  [4;35;1mRestaurante Load (0.000171)[0m   [0mSELECT * FROM "restaurantes" [0m
+  [4;36;1mRestaurante Update (0.000227)[0m   [0;1mUPDATE "restaurantes" SET "updated_at" = '2010-04-27 23:17:15' WHERE "id" = NULL[0m
+  [4;35;1mRestaurante Load (0.000171)[0m   [0mSELECT * FROM "restaurantes" [0m
+  [4;36;1mRestaurante Update (0.000231)[0m   [0;1mUPDATE "restaurantes" SET "updated_at" = '2010-04-27 23:18:59', "nome" = 'bdd' WHERE "id" = NULL[0m
+  [4;35;1mRestaurante Delete all (0.000317)[0m   [0mDELETE FROM "restaurantes" WHERE ("id" IN (1)) [0m
+  [4;36;1mRestaurante Delete all (0.000309)[0m   [0;1mDELETE FROM "restaurantes" WHERE ("id" IN (1)) [0m
+  [4;35;1mRestaurante Load (0.000166)[0m   [0mSELECT * FROM "restaurantes" [0m
+  [4;36;1mRestaurante Create (0.000258)[0m   [0;1mINSERT INTO "restaurantes" ("endereco", "created_at", "nome", "updated_at", "especialidade") VALUES('Macae', '2010-04-27 23:32:37', 'Mr Pizza', '2010-04-27 23:32:37', 'Pizza')[0m
+  [4;35;1mRestaurante Load (0.000340)[0m   [0mSELECT * FROM "restaurantes" LIMIT 1[0m
+  [4;36;1mRestaurante Load (0.000338)[0m   [0;1mSELECT * FROM "restaurantes" WHERE ("restaurantes"."id" = 2) [0m
+  [4;35;1mRestaurante Load (0.000185)[0m   [0mSELECT * FROM "restaurantes" WHERE ("restaurantes"."nome" = 'Mr') LIMIT 1[0m
+  [4;36;1mRestaurante Load (0.000183)[0m   [0;1mSELECT * FROM "restaurantes" WHERE ("restaurantes"."nome" = 'Mr pizza') LIMIT 1[0m
+  [4;35;1mRestaurante Load (0.000336)[0m   [0mSELECT * FROM "restaurantes" WHERE ("restaurantes"."nome" = 'Mr Pizza') LIMIT 1[0m
+  [4;36;1mRestaurante Load (0.000000)[0m   [0;1mSQLite3::SQLException: near "%": syntax error: SELECT * FROM "restaurantes" WHERE (nome like %Mr %) [0m
+  [4;35;1mRestaurante Load (0.000000)[0m   [0mSQLite3::SQLException: near "%": syntax error: SELECT * FROM "restaurantes" WHERE (nome like %Mr %) [0m
+  [4;36;1mRestaurante Load (0.000345)[0m   [0;1mSELECT * FROM "restaurantes" WHERE (nome like '%Mr %') [0m
+  [4;35;1mRestaurante Load (0.000000)[0m   [0mSQLite3::SQLException: near "ilike": syntax error: SELECT * FROM "restaurantes" WHERE (nome ilike '%Mr %') [0m
+  [4;36;1mRestaurante Load (0.000342)[0m   [0;1mSELECT * FROM "restaurantes" WHERE (nome like '%Mr %') [0m
+  [4;35;1mRestaurante Load (0.000000)[0m   [0mSQLite3::SQLException: near "ilike": syntax error: SELECT * FROM "restaurantes" WHERE (nome ilike '%mr %') [0m
+  [4;36;1mSQL (0.000288)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mRestaurante Load (0.000186)[0m   [0mSELECT * FROM "restaurantes" WHERE ("restaurantes"."especialidade" = '--- :Pizza
+') LIMIT 1[0m
+  [4;36;1mRestaurante Create (0.000216)[0m   [0;1mINSERT INTO "restaurantes" ("endereco", "created_at", "nome", "updated_at", "especialidade") VALUES(NULL, '2010-04-27 23:41:39', NULL, '2010-04-27 23:41:39', '--- :Pizza
+')[0m
+  [4;35;1mRestaurante Load (0.000330)[0m   [0mSELECT * FROM "restaurantes" WHERE ("restaurantes"."especialidade" = '--- :Pizza
+') LIMIT 1[0m
+  [4;36;1mRestaurante Load (0.000333)[0m   [0;1mSELECT * FROM "restaurantes" WHERE ("restaurantes"."especialidade" = '--- :Pizza
+') LIMIT 1[0m
+  [4;35;1mRestaurante Load (0.000344)[0m   [0mSELECT * FROM "restaurantes" WHERE ("restaurantes"."especialidade" = 'Pizza') LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 20:50:23) [POST]
+  Session ID: 1c2198fbae3a3ae07ec15f906c6e2a78
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1c602cfd77485d3319fb19a1802f46b61b2a9c99", "pessoa"=>{"nome"=>"a", "data_de_nascimento(1i)"=>"2010", "altura"=>"", "data_de_nascimento(2i)"=>"4", "data_de_nascimento(3i)"=>"27"}}
+
+
+ActionController::RoutingError (No route matches "/pessoas" with {:method=>:post}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Desktop/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 20:50:31) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/restaurante" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Desktop/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 20:50:34) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/restaurantes" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Desktop/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 20:52:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/restaurantes" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Desktop/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-27 20:52:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/restaurantes" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Desktop/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-04-27 20:52:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"show", "controller"=>"restaurantes"}
+
+
+NameError (uninitialized constant RestaurantesController):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:278:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:283:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Desktop/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2010-05-18 13:53:22) [GET]
+  Session ID: 48a0a263f0fe9520bcf45446e4074fdf
+  Parameters: {"action"=>"show", "controller"=>"restaurantes"}
+
+
+NameError (uninitialized constant RestaurantesController):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:278:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:283:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Workspace/ruby/rails/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000461)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000192)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20100427224316)
+  [4;35;1mSQL (0.000137)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddEspecialidadeToRestaurante (20100427225121)
+  [4;36;1mSQL (0.000134)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20100428000032)
+  [4;35;1mSQL (0.000133)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000104)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.021187)[0m   [0mCREATE TABLE "clientes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(80) DEFAULT NULL NULL, "idade" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.001364)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100428000032')[0m
+Migrating to CreatePratos (20100428000159)
+  [4;35;1mSQL (0.000186)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001747)[0m   [0;1mCREATE TABLE "pratos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(80) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002996)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100428000159')[0m
+Migrating to CreateReceitas (20100428000251)
+  [4;36;1mSQL (0.000265)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001690)[0m   [0mCREATE TABLE "receitas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "conteudo" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.001218)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100428000251')[0m
+Migrating to CreateQualificacoes (20100518223603)
+  [4;35;1mSQL (0.000386)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.004359)[0m   [0;1mCREATE TABLE "qualificacoes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cliente_id" integer DEFAULT NULL NULL, "restaurante_id" integer DEFAULT NULL NULL, "nota" float DEFAULT NULL NULL, "valor_gasto" float DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.001205)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100518223603')[0m
+  [4;36;1mSQL (0.000360)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000352)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000063)[0m   [0;1mPRAGMA index_list("clientes")[0m
+  [4;35;1mSQL (0.000060)[0m   [0mPRAGMA index_list("pratos")[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mPRAGMA index_list("qualificacoes")[0m
+  [4;35;1mSQL (0.000059)[0m   [0mPRAGMA index_list("receitas")[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mPRAGMA index_list("restaurantes")[0m
+  [4;36;1mSQL (0.000659)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000311)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000238)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000240)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000238)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20100427224316)
+  [4;35;1mSQL (0.000239)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddEspecialidadeToRestaurante (20100427225121)
+  [4;36;1mSQL (0.000245)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateClientes (20100428000032)
+  [4;35;1mSQL (0.000243)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePratos (20100428000159)
+  [4;36;1mSQL (0.000250)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateReceitas (20100428000251)
+  [4;35;1mSQL (0.000243)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateQualificacoes (20100518223603)
+  [4;36;1mSQL (0.000237)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePratosRestaurantesJoinTable (20100518232525)
+  [4;35;1mSQL (0.000238)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.003969)[0m   [0mCREATE TABLE "pratos_restaurantes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "prato_id" integer DEFAULT NULL NULL, "restaurante_id" integer DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.011278)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100518232525')[0m
+  [4;35;1mSQL (0.000438)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000388)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000065)[0m   [0mPRAGMA index_list("clientes")[0m
+  [4;36;1mSQL (0.000059)[0m   [0;1mPRAGMA index_list("pratos")[0m
+  [4;35;1mSQL (0.000059)[0m   [0mPRAGMA index_list("pratos_restaurantes")[0m
+  [4;36;1mSQL (0.000060)[0m   [0;1mPRAGMA index_list("qualificacoes")[0m
+  [4;35;1mSQL (0.000064)[0m   [0mPRAGMA index_list("receitas")[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mPRAGMA index_list("restaurantes")[0m
+
+
+Processing RestaurantesController#show (for 127.0.0.1 at 2010-06-08 19:03:53) [GET]
+  Session ID: 32bd67574ed4faf1fb2ba43072b54f52
+  Parameters: {"action"=>"show", "controller"=>"restaurantes"}
+  [4;36;1mSQL (0.000910)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000400)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `has_many_and_belongs_to' for #<Class:0xb6d2e57c>):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1667:in `method_missing'
+    /app/models/restaurante.rb:3
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:214:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:485:in `send'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:485:in `const_missing'
+    /app/controllers/restaurantes_controller.rb:6:in `show'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Workspace/ruby/rails/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
