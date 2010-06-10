@@ -1,4 +1,5 @@
 class RestaurantesController < ApplicationController
+
   def index
     @restaurantes = Restaurante.find(:all, :order => "nome")
   end

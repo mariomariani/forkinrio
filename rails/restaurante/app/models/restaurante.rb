@@ -1,6 +1,6 @@
 class Restaurante < ActiveRecord::Base
 
-	has_many_and_belongs_to :pratos
+	has_and_belongs_to_many :pratos
 	has_many :qualificacoes	
 
 	validates_presence_of :nome, :message => "deve ser preenchido"
@@ -11,7 +11,7 @@ class Restaurante < ActiveRecord::Base
 	validate :primeira_letra_deve_ser_maiuscula
 	private
 	def primeira_letra_deve_ser_maiuscula
-	  errors.add("nome", "primeira letra deve ser maiúscula") unless nome =~ /[A-Z].*/
+		errors.add("nome", "primeira letra deve ser maiúscula") unless nome =~ /[A-Z].*/
 	end
 
 
