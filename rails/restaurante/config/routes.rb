@@ -2,6 +2,11 @@ ActionController::Routing::Routes.draw do |map|
   
 
 	map.resources :restaurantes
+	map.resources :clientes
+	map.resources :qualificacoes
+	map.resources :pratos
+	map.resources :receitas
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

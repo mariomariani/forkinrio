@@ -1071,3 +1071,333 @@ Rendering template within layouts/application
 Rendering restaurantes/index
 Rendered restaurantes/_titulo (0.00002)
 Completed in 0.01030 (97 reqs/sec) | Rendering: 0.00370 (35%) | DB: 0.00063 (6%) | 200 OK [http://localhost/restaurantes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:19:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzBiM2UyYjdjZjA0MjZlYzViOGViY2I5YWVjZTc1
+ODUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--18541d5c856060cd5530f83a4d8015dc3e951e2b
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+
+
+CGI::Session::CookieStore::TamperedWithCookie (CGI::Session::CookieStore::TamperedWithCookie):
+    /vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:144:in `unmarshal'
+    /vendor/rails/actionpack/lib/action_controller/session/cookie_store.rb:101:in `restore'
+    /usr/lib/ruby/1.8/cgi/session.rb:310:in `[]'
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:136:in `session'
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:168:in `stale_session_check!'
+    /vendor/rails/actionpack/lib/action_controller/cgi_process.rb:116:in `session'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1135:in `assign_shortcuts_without_flash'
+    /vendor/rails/actionpack/lib/action_controller/flash.rb:166:in `assign_shortcuts'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:523:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Workspace/forkinrio/rails/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:20:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+  [4;36;1mCliente Load (0.000657)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/application
+Rendering clientes/index
+
+
+ActionView::TemplateError (undefined local variable or method `new_cliente_path' for #<ActionView::Base:0xb6c9ca64>) on line #22 of clientes/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New cliente', new_cliente_path %>
+
+    app/views/clientes/index.html.erb:22:in `_run_erb_47app47views47clientes47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/clientes_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/samuel/Workspace/forkinrio/rails/restaurante/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:21:29) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+  [4;35;1mCliente Load (0.000490)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/application
+Rendering clientes/index
+Completed in 0.01039 (96 reqs/sec) | Rendering: 0.00365 (35%) | DB: 0.00049 (4%) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:21:33) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+  [4;36;1mCliente Load (0.000384)[0m   [0;1mSELECT * FROM "clientes" [0m
+Rendering template within layouts/application
+Rendering clientes/index
+Completed in 0.00612 (163 reqs/sec) | Rendering: 0.00104 (17%) | DB: 0.00038 (6%) | 200 OK [http://localhost/clientes]
+
+
+Processing QualificacoesController#index (for 127.0.0.1 at 2010-06-16 21:21:34) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"index", "controller"=>"qualificacoes"}
+  [4;35;1mQualificacao Load (0.000424)[0m   [0mSELECT * FROM "qualificacoes" [0m
+Rendering template within layouts/application
+Rendering qualificacoes/index
+Completed in 0.00732 (136 reqs/sec) | Rendering: 0.00185 (25%) | DB: 0.00042 (5%) | 200 OK [http://localhost/qualificacoes]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2010-06-16 21:21:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000844)[0m   [0;1mSELECT * FROM "restaurantes" ORDER BY nome[0m
+Rendering template within layouts/application
+Rendering restaurantes/index
+Rendered restaurantes/_titulo (0.00001)
+Completed in 0.01882 (53 reqs/sec) | Rendering: 0.00854 (45%) | DB: 0.00084 (4%) | 200 OK [http://localhost/restaurantes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:21:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+  [4;35;1mCliente Load (0.000490)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/application
+Rendering clientes/index
+Completed in 0.00786 (127 reqs/sec) | Rendering: 0.00134 (17%) | DB: 0.00049 (6%) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-06-16 21:21:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--a3addd190a16fb18d9689029eeba4c03fca11bd6
+  Parameters: {"action"=>"new", "controller"=>"clientes"}
+Rendering template within layouts/application
+Rendering clientes/new
+Completed in 0.01171 (85 reqs/sec) | Rendering: 0.00457 (39%) | DB: 0.00000 (0%) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-06-16 21:21:47) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"a69b0437972529d41e69d8b131ad535ff4c711ee", "action"=>"create", "cliente"=>{"nome"=>"Mario", "idade"=>"26"}, "controller"=>"clientes"}
+  [4;36;1mSQL (0.000132)[0m   [0;1mSELECT "nome" FROM "clientes" WHERE ("clientes".nome = 'Mario') [0m
+  [4;35;1mCliente Create (0.000356)[0m   [0mINSERT INTO "clientes" ("created_at", "nome", "updated_at", "idade") VALUES('2010-06-17 00:21:47', 'Mario', '2010-06-17 00:21:47', 26)[0m
+Redirected to http://localhost:3000/clientes/1
+Completed in 0.01615 (61 reqs/sec) | DB: 0.00049 (3%) | 302 Found [http://localhost/clientes]
+
+
+Processing ClientesController#show (for 127.0.0.1 at 2010-06-16 21:21:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZDbGllbnRlIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdG--64277aa4450473af5848395ef67203fed428185b
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"clientes"}
+  [4;36;1mCliente Load (0.000304)[0m   [0;1mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering clientes/show
+Completed in 0.01310 (76 reqs/sec) | Rendering: 0.00485 (37%) | DB: 0.00030 (2%) | 200 OK [http://localhost/clientes/1]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:21:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZDbGllbnRlIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdU--3e658994995c64f6be2f18f78ace543b2da1d751
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+  [4;35;1mCliente Load (0.000641)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/application
+Rendering clientes/index
+Completed in 0.01089 (91 reqs/sec) | Rendering: 0.00391 (35%) | DB: 0.00064 (5%) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#new (for 127.0.0.1 at 2010-06-16 21:21:54) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"action"=>"new", "controller"=>"clientes"}
+Rendering template within layouts/application
+Rendering clientes/new
+Completed in 0.01087 (91 reqs/sec) | Rendering: 0.00366 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/clientes/new]
+
+
+Processing ClientesController#create (for 127.0.0.1 at 2010-06-16 21:21:56) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"a69b0437972529d41e69d8b131ad535ff4c711ee", "action"=>"create", "cliente"=>{"nome"=>"", "idade"=>""}, "controller"=>"clientes"}
+  [4;36;1mSQL (0.000118)[0m   [0;1mSELECT "nome" FROM "clientes" WHERE ("clientes".nome = '') [0m
+Rendering template within layouts/application
+Rendering clientes/new
+Completed in 0.01290 (77 reqs/sec) | Rendering: 0.00360 (27%) | DB: 0.00012 (0%) | 200 OK [http://localhost/clientes]
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2010-06-16 21:21:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"action"=>"index", "controller"=>"clientes"}
+  [4;35;1mCliente Load (0.000624)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/application
+Rendering clientes/index
+Completed in 0.01034 (96 reqs/sec) | Rendering: 0.00384 (37%) | DB: 0.00062 (6%) | 200 OK [http://localhost/clientes]
+
+
+Processing QualificacoesController#index (for 127.0.0.1 at 2010-06-16 21:22:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"action"=>"index", "controller"=>"qualificacoes"}
+  [4;36;1mQualificacao Load (0.000481)[0m   [0;1mSELECT * FROM "qualificacoes" [0m
+Rendering template within layouts/application
+Rendering qualificacoes/index
+Completed in 0.00770 (129 reqs/sec) | Rendering: 0.00132 (17%) | DB: 0.00048 (6%) | 200 OK [http://localhost/qualificacoes]
+
+
+Processing QualificacoesController#new (for 127.0.0.1 at 2010-06-16 21:22:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"action"=>"new", "controller"=>"qualificacoes"}
+Rendering template within layouts/application
+Rendering qualificacoes/new
+  [4;35;1mCliente Load (0.000293)[0m   [0mSELECT * FROM "clientes" ORDER BY nome[0m
+  [4;36;1mRestaurante Load (0.000276)[0m   [0;1mSELECT * FROM "restaurantes" ORDER BY nome[0m
+Completed in 0.02235 (44 reqs/sec) | Rendering: 0.01565 (70%) | DB: 0.00057 (2%) | 200 OK [http://localhost/qualificacoes/new]
+
+
+Processing QualificacoesController#create (for 127.0.0.1 at 2010-06-16 21:22:13) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--23956befb5b97622813cbce72e1fcdfea0d663be
+  Parameters: {"commit"=>"Create", "qualificacao"=>{"nota"=>"1", "valor_gasto"=>"1", "cliente_id"=>"1", "restaurante_id"=>"2"}, "authenticity_token"=>"a69b0437972529d41e69d8b131ad535ff4c711ee", "action"=>"create", "controller"=>"qualificacoes"}
+  [4;35;1mCliente Load (0.000281)[0m   [0mSELECT * FROM "clientes" WHERE ("clientes"."id" = 1) [0m
+  [4;36;1mSQL (0.000102)[0m   [0;1mSELECT "nome" FROM "clientes" WHERE ("clientes".nome = 'Mario' AND "clientes".id <> 1) [0m
+  [4;35;1mRestaurante Load (0.000256)[0m   [0mSELECT * FROM "restaurantes" WHERE ("restaurantes"."id" = 2) [0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mSELECT "nome" FROM "restaurantes" WHERE ("restaurantes".nome = 'Mr Pizza' AND "restaurantes".id <> 2) [0m
+  [4;35;1mSQL (0.000087)[0m   [0mSELECT "endereco" FROM "restaurantes" WHERE ("restaurantes".endereco = 'Macae' AND "restaurantes".id <> 2) [0m
+  [4;36;1mQualificacao Create (0.000215)[0m   [0;1mINSERT INTO "qualificacoes" ("created_at", "nota", "valor_gasto", "updated_at", "cliente_id", "restaurante_id") VALUES('2010-06-17 00:22:13', 1.0, 1.0, '2010-06-17 00:22:13', 1, 2)[0m
+Redirected to http://localhost:3000/qualificacoes/1
+Completed in 0.03005 (33 reqs/sec) | DB: 0.00104 (3%) | 302 Found [http://localhost/qualificacoes]
+
+
+Processing QualificacoesController#show (for 127.0.0.1 at 2010-06-16 21:22:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIitRdWFsaWZpY2FjYW8gd2FzIHN1Y2Nlc3NmdWxseSBj
+cmVhdGVkLgY6CkB1c2VkewY7B0Y=--0df4f58834373ee0e0a01dd09b712f7408953b31
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"qualificacoes"}
+  [4;35;1mQualificacao Load (0.000219)[0m   [0mSELECT * FROM "qualificacoes" WHERE ("qualificacoes"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering qualificacoes/show
+Completed in 0.00871 (114 reqs/sec) | Rendering: 0.00255 (29%) | DB: 0.00022 (2%) | 200 OK [http://localhost/qualificacoes/1]
+
+
+Processing QualificacoesController#index (for 127.0.0.1 at 2010-06-16 21:22:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNGZlMjMwZGFiZjhjZGM2YjY5OTFmYTllODc5Y2Rm
+NGQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIitRdWFsaWZpY2FjYW8gd2FzIHN1Y2Nlc3NmdWxseSBj
+cmVhdGVkLgY6CkB1c2VkewY7B1Q=--6c329fb933f32f1cc527b347e827aa5b75fc6704
+  Parameters: {"action"=>"index", "controller"=>"qualificacoes"}
+  [4;36;1mQualificacao Load (0.000676)[0m   [0;1mSELECT * FROM "qualificacoes" [0m
+Rendering template within layouts/application
+Rendering qualificacoes/index
+Completed in 0.01095 (91 reqs/sec) | Rendering: 0.00424 (38%) | DB: 0.00068 (6%) | 200 OK [http://localhost/qualificacoes]
