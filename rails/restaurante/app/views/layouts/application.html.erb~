@@ -1,10 +1,10 @@
 <html>
   <head>
-    <title>Programa de Qualificação de Restaurantes</title>
+    <title>Programa de Qualificacao de Restaurantes</title>
   </head>
   <body>
     <p style="color: green"><%= flash[:notice] %></p>
+    
     <%= yield %>
   </body>
 </html>
-

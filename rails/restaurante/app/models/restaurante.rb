@@ -1,4 +1,4 @@
-class Restaurante < ActiveRecord::Base
+	class Restaurante < ActiveRecord::Base
 
 	has_and_belongs_to_many :pratos
 	has_many :qualificacoes	
