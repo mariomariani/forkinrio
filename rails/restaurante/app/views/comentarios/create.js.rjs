@@ -1,0 +1,14 @@
+page.visual_effect :shrink, 'novo_comentario'
+
+page.visual_effect :fade, 'novo_comentario'
+
+page.insert_html :bottom, 'comentarios',
+                 :partial => 'comentario',
+                 :locals => { :comentario => @comentario }
+
+page.insert_html :after, 'comentarios',
+                 :partial => 'novo_comentario',
+                 :locals => { :comentavel => @comentario.comentavel }
+
+page.visual_effect :highlight, "comentario_#{@comentario.id}"
+
